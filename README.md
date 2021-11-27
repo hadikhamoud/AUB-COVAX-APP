@@ -1,7 +1,4 @@
-# AUBCOVAX
 
-
-# AUBCOVAX
 
 
 # Welcome to AUB COVAX
@@ -20,7 +17,7 @@
 
 
 
-# the requirements for the project are the following
+ the requirements for the project are the following
 
 1- INSTALL PYTHON 
 
