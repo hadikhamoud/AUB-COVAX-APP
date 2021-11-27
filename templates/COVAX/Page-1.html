@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Covid-19 Vaccination Card">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Page-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.0.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-edd4"><div class="u-align-left-xs u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1"></div></header>
+    <section class="u-clearfix u-section-1" id="sec-1c52">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/logo2x.png" alt="" data-image-width="250" data-image-height="200">
+        <h1 class="u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-palette-2-base u-text-1">Covid-19 Vaccination Card&nbsp;</h1>
+        <div class="u-border-3 u-border-palette-2-base u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
+        {%csrf_token%}
+        <p class="u-text u-text-default u-text-2">Full Name</p>
+        <p class="u-text u-text-default u-text-3">{{response.Patient.user.first_name}}</p>
+        <p class="u-text u-text-default u-text-4">ID No.</p>
+        <p class="u-text u-text-default u-text-5">{{response.Patient.IDCard}}</p>
+        <p class="u-text u-text-default u-text-6">Phone No.</p>
+        <p class="u-text u-text-default u-text-7">{{response.Patient.PhoneNumber}}</p>
+        <p class="u-text u-text-default u-text-8">Date Of Birth</p>
+        <p class="u-text u-text-default u-text-9">{{response.Patient.DateOfBirth}}</p>
+        <p class="u-text u-text-default u-text-10">City</p>
+        <p class="u-text u-text-default u-text-11">{{response.Patient.City}}</p>
+        <p class="u-text u-text-default u-text-12">Country</p>
+        <p class="u-text u-text-default u-text-13">{{response.Patient.Country}}</p>
+        <div class="u-border-3 u-border-palette-2-base u-palette-2-base u-shape u-shape-rectangle u-shape-2"></div>
+        <div class="u-expanded-width-xs u-table u-table-responsive u-table-1">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="33.3%">
+              <col width="33.3%">
+              <col width="33.4%">
+            </colgroup>
+            <tbody class="u-table-body">
+              <tr style="height: 33px;">
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-table-cell-1">Vaccine Date</td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-table-cell-2">Vaccine Name</td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-table-cell-3">Dose</td>
+              </tr>
+              <tr style="height: 44px;">
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">{{response.Dose_one_date}}</td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">&nbsp;<b>Pfizer - BioNTech&nbsp;</b>
+                </td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">Dose 1&nbsp;</td>
+              </tr>
+              <tr style="height: 44px;">
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">{{response.Dose_two_date}}</td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">&nbsp;<b>Pfizer - BioNTech&nbsp;</b>
+                </td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">Dose 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+       </section>
+  </body>
+</html>
